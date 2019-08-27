@@ -10,14 +10,20 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.delete.console.log"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [{
-            "command": "extension.helloWorld",
-			"title": "Hello World"
-		}]
+            "command": "extension.delete.console.log",
+			"title": "删除console.log"
+		}],
+		"menus": {
+			"editor/context": [{
+				"command": "extension.delete.console.log",
+				"group": "9_cutcopypaste"
+			}]
+		}
 	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
